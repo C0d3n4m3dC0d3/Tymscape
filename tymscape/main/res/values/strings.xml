@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tymscape</string>
+    <string name="title">TYMSCAPE</string>
+    <string name="slogan">Your Personal Scheduler</string>
+    <string name="username">Username</string>
+    <string name="label1">Email ID</string>
+    <string name="label2">Password</string>
+</resources>

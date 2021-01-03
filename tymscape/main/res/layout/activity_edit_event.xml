@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".EditEventActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/bevan"
+        android:text="Edit  Event"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/l2"
+        android:transitionName="logo_image" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eventTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="365dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="EVENT NAME *"
+                android:textColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eventDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="365dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:hint="EVENT DESCRIPTION (optional)"
+                android:textColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eventDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="298dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="90dp"
+                android:hint="EVENT DATE *"
+                android:textColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/datepicker"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-80dp"
+                android:src="@drawable/ic_calendar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eventTime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="298dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="20dp"
+                android:hint="EVENT TIME *"
+                android:textColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/timechooser"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-80dp"
+                android:src="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/Widget.MaterialComponents.Snackbar.TextView"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="CATEGORY *"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15.5sp"></com.google.android.material.textview.MaterialTextView>
+
+            <RadioGroup
+                android:id="@+id/radioCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp">
+
+                <RadioButton
+                    android:id="@+id/radioHome"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:checked="false"
+                    android:text=" Home"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+
+                <RadioButton
+                    android:id="@+id/radioWorkCollege"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:checked="false"
+                    android:text=" Work/College"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+
+                <RadioButton
+                    android:id="@+id/radioPersonal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:checked="false"
+                    android:text=" Personal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+
+                <RadioButton
+                    android:id="@+id/radioOther"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:checked="false"
+                    android:text=" Other"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/Widget.MaterialComponents.Snackbar.TextView"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="PRIORITY *"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15.5sp"></com.google.android.material.textview.MaterialTextView>
+
+            <RadioGroup
+                android:id="@+id/radioPriority"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp">
+
+                <RadioButton
+                    android:id="@+id/radioCritical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="12dp"
+                    android:checked="false"
+                    android:text=" Critical"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5dp" />
+
+                <RadioButton
+                    android:id="@+id/radioImportant"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:checked="false"
+                    android:text=" Important"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+
+                <RadioButton
+                    android:id="@+id/radioNormal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="24dp"
+                    android:checked="false"
+                    android:text=" Normal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14.5sp" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="?android:attr/listDivider" />
+
+            <ImageView
+                android:id="@+id/cancel_btn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_close" />
+
+            <ImageView
+                android:id="@+id/delete_btn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="-42dp"
+                android:src="@drawable/ic_delete" />
+
+            <ImageView
+                android:id="@+id/edit_btn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="-42dp"
+                android:src="@drawable/ic_check" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
